@@ -4,7 +4,7 @@ import {CHAT_GPT_API_KEY} from '@env';
 import axios from 'axios';
 import {StyleSheet} from 'react-native';
 
-const App = () => {
+const ChatScreen = () => {
   const [messages, setMessages] = useState([]);
 
   const sendMessage = async (message) => {
@@ -47,7 +47,7 @@ const App = () => {
         user: {
           _id: 2,
           name: 'GPT-3.5-turbo',
-          //avatar: require('../assets/chatgptlogo.png'),
+          avatar: require('../assets/chatgptlogo.png'),
         },
       },
     ];
@@ -58,7 +58,7 @@ const App = () => {
   const user = {
     _id: 1,
     name: 'Developer',
-    //avatar: require('../assets/profile.jpeg'),
+    avatar: require('../assets/profile.jpeg'),
   };
 
   const renderInputToolbar = props => {
@@ -79,7 +79,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default ChatScreen;
 
 const styles = StyleSheet.create({
   messageContainer: {
